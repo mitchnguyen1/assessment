@@ -1,0 +1,35 @@
+Pet Adoption Agency 
+
+
+Brain Storm: 
+    Display the categories of pet's properties for adopters to see
+
+    Pet Type-Cat/Dog
+    Pet Name
+    Pet Availability
+    Color
+    Breed
+    Age
+    
+
+Table Ideas: 
+    Type(id, type, REF Pet(id))
+        Hold the type of pet (Cats or Dog)
+    Pet(id, name,color,age)
+        Holds the pet's specific info
+    Breed(id, breed, REF type(id), REF Pet(id))
+        Holds the breed while corresponding Cat or Dog and linking pet's id
+    Availability(id, Available, REF pet(id),REF type(id))
+        Holds if a pet has been adopted or not. And can see if theres any available dogs/cats 
+
+Relationships: 
+    One to one:
+    Pet to Availability
+    Pet to Breed
+
+    One to many:
+    Type to Pet
+    Type to Breed
+    Availability to Type
+
+    Many to many: 
